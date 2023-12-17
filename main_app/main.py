@@ -360,7 +360,7 @@ def main():
         ######## change some thing in this part for last realeas
         if event == "-CON-B":
             FMSsys.create_serial_connection()
-            if FMSsys.serial_connectio and window['-info-text-'] in ['finish testing', '...']:
+            if FMSsys.serial_connection and window['-info-text-'] in ['finish testing', '...']:
                 window['-OUT1-'](text_color = 'green')
                 window['-do-alarm-B'](disabled=False)
             else:
