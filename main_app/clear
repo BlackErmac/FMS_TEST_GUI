@@ -1,0 +1,11 @@
+
+Pinging google.com [216.239.38.120] with 32 bytes of data:
+Request timed out.
+Reply from 216.239.38.120: bytes=32 time=86ms TTL=54
+Reply from 216.239.38.120: bytes=32 time=86ms TTL=54
+Reply from 216.239.38.120: bytes=32 time=85ms TTL=54
+
+Ping statistics for 216.239.38.120:
+    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 85ms, Maximum = 86ms, Average = 85ms
