@@ -18,6 +18,10 @@ import platform
 if platform.system() != 'Windows':
     from picamera2 import Picamera2
     import RPi.GPIO as GPIO
+    GPIO.setwarnings(False)
+    GPIO.setmode(GPIO.BOARD)
+
+
 
 
 FILE = Path(__file__).stem
@@ -114,6 +118,8 @@ class FMSSys():
         self.ir_value = 0
 
         self.window_tab = ''
+        self.pin_num = 29
+        GPIO.setup(self.pin_num, GPIO.OUT)
 
     def create_serial_connection(self):
         try:
@@ -360,7 +366,7 @@ def main():
         ######## change some thing in this part for last realeas
         if event == "-CON-B":
             FMSsys.create_serial_connection()
-            if FMSsys.serial_connection and window['-info-text-'] in ['finish testing', '...']:
+            if FMSsys.serial_connection:#and window['-info-text-'] in ['finish testing', '...']:
                 window['-OUT1-'](text_color = 'green')
                 window['-do-alarm-B'](disabled=False)
             else:
